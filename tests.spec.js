@@ -28,13 +28,13 @@ test("Expressions with Parentheses", () => {
   
     // Multiple Parentheses
     expect(resolver('2 + (3 * 4)')).toBe(14);
-    expect(resolver('(5 - 2) + (6 / 2)')).toBe(6.00);  // (5 - 2) + (6 / 2) = 6.00
-    expect(resolver('(4 + 2) * (7 - 3) / 2')).toBe(12.00);  // (4 + 2) * (7 - 3) / 2 = 12.00
+    expect(resolver('(5 - 2) + (6 / 2)')).toBe(6.00);  
+    expect(resolver('(4 + 2) * (7 - 3) / 2')).toBe(12.00);  
   
     // Nested Parentheses
     expect(resolver('(3 + 2) * (6 - 4) + 5')).toBe(15);
-    expect(resolver('2 * ((8 - 4) + 3) / 2')).toBe(7.00);  // 2 * ((8 - 4) + 3) / 2 = 7.00
-    expect(resolver('2.5 + (4 * (6 - 3.5))')).toBe(12.5);  // 2.5 + (4 * (6 - 3.5)) = 13.00
+    expect(resolver('2 * ((8 - 4) + 3) / 2')).toBe(7.00);  
+    expect(resolver('2.5 + (4 * (6 - 3.5))')).toBe(12.5);  
   });
 
 
@@ -46,22 +46,22 @@ test("Expressions with Parentheses", () => {
   
     //Multiple Parentheses with Negative Numbers
     expect(resolver('-2 + (3 * 4)')).toBe(10);
-    expect(resolver('(5 - 2) + (6 / (-2))')).toBe(0);  // (5 - 2) + (6 / 2) = 5.00
-    expect(resolver('0-0')).toBe(0);  // (4 + 2) * (7 - 3) / 2 = 12.00
+    expect(resolver('(5 - 2) + (6 / (-2))')).toBe(0);  
+    expect(resolver('0-0')).toBe(0);  
   
     //Mixed Parentheses with Negative Numbers
     expect(resolver('(3 + 2) * (6 - 4) + 5')).toBe(15);
-    expect(resolver('2 * ((8 - 4) + 3) / 2')).toBe(7.00);  // 2 * ((8 - 4) + 3) / 2 = 7.00
-    expect(resolver('2.5 + (4 * (6 - 3.5))')).toBe(12.5);  // 2.5 + (4 * (6 - 3.5)) = 10.00
+    expect(resolver('2 * ((8 - 4) + 3) / 2')).toBe(7.00);  
+    expect(resolver('2.5 + (4 * (6 - 3.5))')).toBe(12.5);  
   
     //Negative Numbers
-    expect(resolver('-2 + 3')).toBe(1);  // -2 + 3 = 1
-    expect(resolver('-3 * 4')).toBe(-12);  // -3 * 4 = -12
+    expect(resolver('-2 + 3')).toBe(1);  
+    expect(resolver('-3 * 4')).toBe(-12);  
   
     //Negative Numbers with Parentheses
-    expect(resolver('(-2 + 3) * 4')).toBe(4);  // (-2 + 3) * 4 = 4
-    expect(resolver('-4 * (-6 - 2)')).toBe(32);  // 4 * (-6 - 2) = -32
-    expect(resolver('-(-8 + 2) * (-9 - (-3))')).toBe(-36);  // (-8 + 2) * (-9 - 3) = 60
+    expect(resolver('(-2 + 3) * 4')).toBe(4);  
+    expect(resolver('-4 * (-6 - 2)')).toBe(32);  
+    expect(resolver('-(-8 + 2) * (-9 - (-3))')).toBe(-36);  
   
   });
   
