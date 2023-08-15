@@ -11,7 +11,6 @@ function resolveParanthesis(expr){
     //Initiating a stack to keep track of paranthesis
     let stack = [];
     let top;
-    console.log(expr.indexOf('('));
     //Checking whether the given string has paranthesis
     if(expr.indexOf('(') != -1){
         top = -1;
@@ -25,8 +24,7 @@ function resolveParanthesis(expr){
 
     //Going through the string
     for(let i=0; i<expr.length; i++){
-        expr[i] = expr[i]
-        
+    
         //Pushing all characters except opening paranthesis into the stack
         if(expr[i] != ')'){
             stack.push(expr[i].trim());
@@ -99,7 +97,7 @@ function parseInputString(expr){
         }
         arr.splice(1,1);
     }
-    console.log(arr);
+    
     return Number(evaluateInput(arr));
 }
 
